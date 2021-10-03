@@ -1,19 +1,18 @@
 package tbu.blockmod.entities.romanentitypackage;
 
 import net.minecraft.client.model.ModelPart;
-import net.minecraft.client.render.entity.EntityRenderDispatcher;
-import net.minecraft.client.render.entity.EntityRenderer;
-import net.minecraft.client.render.entity.EntityRendererFactory;
-import net.minecraft.client.render.entity.MobEntityRenderer;
+import net.minecraft.client.render.entity.*;
 import net.minecraft.client.render.entity.model.PiglinEntityModel;
 import net.minecraft.util.Identifier;
+import tbu.blockmod.client.AlexEntityClient;
+import tbu.blockmod.entities.alexentitypackage.AlexEntityModel;
 
 public class RomanEntityRenderer extends MobEntityRenderer<RomanEntity, PiglinEntityModel<RomanEntity>> {
 
 
-    public RomanEntityRenderer(EntityRenderDispatcher entityRenderDispatcher_1) {
-        super(entityRenderDispatcher_1, new PiglinEntityModel<>(), 1);
-    }
+
+    public RomanEntityRenderer(EntityRendererFactory.Context context) {
+        super(context, new PiglinEntityModel<>(context.getPart(RomanEntityClient.MODEL_ROMAN_LAYER)), 0.5f);    }
 
     @Override
     public Identifier getTexture(RomanEntity romanEntity) {
