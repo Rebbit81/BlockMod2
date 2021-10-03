@@ -14,10 +14,13 @@ public class AlexEntityClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
+
         EntityRendererRegistry.register(EntityRegister.ALEX, (context) -> {
             return new AlexEntityRenderer(context);
         });
 
         EntityModelLayerRegistry.registerModelLayer(MODEL_ALEX_LAYER, AlexEntityModel::getTexturedModelData);
+
+
     }
 }
