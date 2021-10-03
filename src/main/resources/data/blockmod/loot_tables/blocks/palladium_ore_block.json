@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "blockmod:palladium"
+          "name": "blockmod:palladium_dust"
         }
       ],
       "conditions": [

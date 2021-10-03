@@ -23,7 +23,7 @@ public class PalladiumEndOreGen {
     private static ConfiguredFeature<?, ?> PALLADIUM_ORE_END = Feature.ORE
             .configure(new OreFeatureConfig(
                     new BlockMatchRuleTest(Blocks.END_STONE), // Base block is end stone in The End biomes
-                    ModBlocks.Palladium_ORE_BLOCK.getDefaultState(),
+                    ModBlocks.PALLADIUM_ORE_BLOCK.getDefaultState(),
                     9))
             .range(new RangeDecoratorConfig(
                     UniformHeightProvider.create(YOffset.fixed(0), YOffset.fixed(64))))

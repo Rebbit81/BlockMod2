@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "blockmod:palladium_dust_bowl"
+  },
+  "result": "blockmod:palladium_ingot",
+  "experience": 20,
+  "cookingtime": 20
+}

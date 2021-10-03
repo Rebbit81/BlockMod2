@@ -1,8 +1,12 @@
 package tbu.blockmod;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder;
 import net.minecraft.entity.EntityType;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.util.Identifier;
@@ -18,7 +22,10 @@ public class Blockmod implements ModInitializer {
     private static final Identifier OCELOT_LOOT_TABLE_ID = EntityType.OCELOT.getLootTableId();
     private static final Identifier CAT_LOOT_TABLE_ID = EntityType.CAT.getLootTableId();
 
-
+    public static final ItemGroup BM_GROUP = FabricItemGroupBuilder.create(
+                    new Identifier("blockmod", "bm_group"))
+            .icon(() -> new ItemStack(ModBlocks.PALLADIUM_ORE_BLOCK))
+            .build();
 
 
 
