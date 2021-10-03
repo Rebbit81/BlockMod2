@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "blockmod:ruby_ore_block",
+    "blockmod:ruby_block"
+  ]
+}
+
