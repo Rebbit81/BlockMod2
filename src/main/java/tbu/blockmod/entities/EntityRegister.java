@@ -1,6 +1,7 @@
 package tbu.blockmod.entities;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.client.rendereregistry.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.entity.Entity;
@@ -25,7 +26,7 @@ public class EntityRegister implements ModInitializer {
     public static final EntityType<RomanEntity> ROMAN = Registry.register(
             Registry.ENTITY_TYPE,
             new Identifier("blockmod", "roman"),
-            FabricEntityTypeBuilder.create(SpawnGroup.AMBIENT, (EntityType.EntityFactory<RomanEntity>) RomanEntity::new).dimensions(EntityDimensions.fixed(1,2)).build()
+            FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, RomanEntity::new).dimensions(EntityDimensions.fixed(1.0f,2.0f)).build()
     );
 
 
@@ -33,6 +34,6 @@ public class EntityRegister implements ModInitializer {
     public void onInitialize() {
 
         FabricDefaultAttributeRegistry.register(ALEX, AlexEntity.createMobAttributes());
-        FabricDefaultAttributeRegistry.register(ROMAN, RomanEntity.createMobAttributes());
+        FabricDefaultAttributeRegistry.register(ROMAN, RomanEntity.createPiglinAttributes());
     }
 }
