@@ -11,10 +11,12 @@
   "environment": "*",
   "entrypoints": {
     "client": [
-      "tbu.blockmod.client.BlockmodClient"
+      "tbu.blockmod.client.BlockmodClient",
+      "tbu.blockmod.client.AlexEntityClient"
     ],
     "main": [
-      "tbu.blockmod.Blockmod"
+      "tbu.blockmod.Blockmod",
+      "tbu.blockmod.entities.EntityRegister"
     ]
   },
   "mixins": [
