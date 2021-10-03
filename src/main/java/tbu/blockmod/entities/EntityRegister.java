@@ -30,5 +30,7 @@ public class EntityRegister implements ModInitializer {
     public void onInitialize() {
 
         FabricDefaultAttributeRegistry.register(ALEX, AlexEntity.createMobAttributes());
+        FabricDefaultAttributeRegistry.register(ROMAN, RomanEntity.createLivingAttributes());
+
     }
 }
