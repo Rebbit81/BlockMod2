@@ -5,20 +5,22 @@ import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.item.SpawnEggItem;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 import tbu.blockmod.Blockmod;
 import tbu.blockmod.entities.EntityRegister;
-public class ModItems {
+
+public class ModItems{
     public static String MOD_ID = "blockmod";
 
     // Palladium
-    public static final Item PALLADIUM_INGOT = new Item(new Item.Settings().group(Blockmod.BM_GROUP));
+    public static final Item PALLADIUM_INGOT = new Item(new Item.Settings().recipeRemainder(ModItems.RAW_HORSEMEAT).group(Blockmod.BM_GROUP).rarity(Rarity.EPIC));
     public static final Item PALLADIUM_DUST = new Item(new Item.Settings().group(Blockmod.BM_GROUP));
     public static final Item PALLADIUM_NUGGET = new Item(new Item.Settings().group(Blockmod.BM_GROUP));
 
     // Netherite Bowl
     public static final Item NETHERITE_BOWL = new Item(new Item.Settings().group(Blockmod.BM_GROUP));
-    public static final Item PALLADIUM_DUST_BOWL = new Item(new Item.Settings().recipeRemainder(ModItems.NETHERITE_BOWL).group(Blockmod.BM_GROUP));
+    public static final Item PALLADIUM_DUST_BOWL = new Item(new Item.Settings().recipeRemainder(Items.BOWL).group(Blockmod.BM_GROUP));
 
     // Fleisch
     public static final Item RAW_CATMEAT = new Item(new Item.Settings().group(Blockmod.BM_GROUP).food(new FoodComponent.Builder().hunger(1).saturationModifier(1.8f).build()));
