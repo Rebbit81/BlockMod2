@@ -9,9 +9,9 @@ import net.minecraft.util.registry.Registry;
 import tbu.blockmod.Blockmod;
 import tbu.blockmod.entities.EntityRegister;
 public class ModItems {
-
+    public static String MOD_ID = "blockmod";
     // Erze
-    public static final Item RUBY = new Item(new Item.Settings().group(ItemGroup.MISC));
+    public static final Item PALLADIUM = new Item(new Item.Settings().group(ItemGroup.MISC));
 
     // Fleisch
     public static final Item RAW_CATMEAT = new Item(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(1).saturationModifier(1.8f).build()));
@@ -26,7 +26,7 @@ public class ModItems {
 
     public static void register(){
 
-        Registry.register(Registry.ITEM, new Identifier(Blockmod.MOD_ID, "ruby"), RUBY);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "palladium"), PALLADIUM);
         Registry.register(Registry.ITEM, new Identifier("blockmod", "raw_horsemeat"), RAW_HORSEMEAT);
         Registry.register(Registry.ITEM, new Identifier("blockmod", "cooked_horsemeat"), COOKED_HORSEMEAT);
         Registry.register(Registry.ITEM, new Identifier("blockmod", "raw_catmeat"), RAW_CATMEAT);

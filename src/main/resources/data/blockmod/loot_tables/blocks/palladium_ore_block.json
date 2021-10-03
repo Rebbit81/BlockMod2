@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "blockmod:ruby_block"
+          "name": "blockmod:palladium"
         }
       ],
       "conditions": [

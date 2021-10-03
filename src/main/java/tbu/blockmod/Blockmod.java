@@ -7,8 +7,8 @@ import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.util.Identifier;
 import tbu.blockmod.blocks.ModBlocks;
-import tbu.blockmod.entities.EntityRegister;
 import tbu.blockmod.items.ModItems;
+import tbu.blockmod.worldgen.PalladiumEndOreGen;
 
 public class Blockmod implements ModInitializer {
 
@@ -20,6 +20,10 @@ public class Blockmod implements ModInitializer {
 
 
     public void onInitialize() {
+
+        ModItems.register();
+        ModBlocks.register();
+        PalladiumEndOreGen.register();
 
 
         // Rohes Pferdefleich Drop
@@ -59,8 +63,6 @@ public class Blockmod implements ModInitializer {
             }
         });
 
-        ModItems.register();
-        ModBlocks.register();
 
     }
 }
