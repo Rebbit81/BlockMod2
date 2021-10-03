@@ -1,11 +1,10 @@
 package tbu.blockmod.entities.romanentitypackage;
 
-import net.minecraft.client.model.ModelPart;
+
 import net.minecraft.client.render.entity.*;
 import net.minecraft.client.render.entity.model.PiglinEntityModel;
 import net.minecraft.util.Identifier;
-import tbu.blockmod.client.AlexEntityClient;
-import tbu.blockmod.entities.alexentitypackage.AlexEntityModel;
+
 
 public class RomanEntityRenderer extends MobEntityRenderer<RomanEntity, PiglinEntityModel<RomanEntity>> {
 
