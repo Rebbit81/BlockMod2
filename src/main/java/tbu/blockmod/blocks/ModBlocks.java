@@ -13,11 +13,11 @@ public class ModBlocks {
 
     public static String MOD_ID = "blockmod";
 
-    public static final Block PALLADIUM_BLOCK = new Block(FabricBlockSettings.of(Material.METAL).strength(5.0f));
-    public static final Block PALLADIUM_ORE_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0f));
+    public static final Block PALLADIUM_BLOCK = new Block(FabricBlockSettings.of(Material.METAL).strength(5.0f).breakByHand(false));
+    public static final Block PALLADIUM_ORE_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0f).breakByHand(false));
 
 
-    public static void register() {
+    public static void init() {
 
 
         Registry.register(Registry.BLOCK, new Identifier("blockmod", "palladium_block"), PALLADIUM_BLOCK);

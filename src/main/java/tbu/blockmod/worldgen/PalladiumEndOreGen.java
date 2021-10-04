@@ -31,7 +31,7 @@ public class PalladiumEndOreGen {
             .repeat(20);
 
 
-    public static void register() {
+    public static void init() {
         RegistryKey<ConfiguredFeature<?, ?>> orePalladiumEnd = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
                 new Identifier("blockmod", "ore_palladium_end"));
         Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, orePalladiumEnd.getValue(), PALLADIUM_ORE_END);
