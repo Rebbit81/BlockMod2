@@ -14,7 +14,7 @@ public class ModItems{
     public static String MOD_ID = "blockmod";
 
     // Palladium
-    public static final Item PALLADIUM_INGOT = new Item(new Item.Settings().recipeRemainder(ModItems.RAW_HORSEMEAT).group(Blockmod.BM_GROUP).rarity(Rarity.EPIC));
+    public static final Item PALLADIUM_INGOT = new Item(new Item.Settings().recipeRemainder(ModItems.PALLADIUM_NUGGET).group(Blockmod.BM_GROUP).rarity(Rarity.EPIC));
     public static final Item PALLADIUM_DUST = new Item(new Item.Settings().group(Blockmod.BM_GROUP));
     public static final Item PALLADIUM_NUGGET = new Item(new Item.Settings().group(Blockmod.BM_GROUP));
 
