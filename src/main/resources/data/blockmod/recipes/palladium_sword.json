@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "#",
+    "T"
+  ],
+  "key": {
+    "#": {
+      "item": "blockmod:palladium_ingot"
+    },
+    "T": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "blockmod:palladium_sword",
+    "count": 1
+  }
+}

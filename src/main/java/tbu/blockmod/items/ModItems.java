@@ -8,6 +8,12 @@ import net.minecraft.util.registry.Registry;
 import tbu.blockmod.Blockmod;
 import tbu.blockmod.armor.PalladiumAmorMaterial;
 import tbu.blockmod.entities.EntityRegister;
+import tbu.blockmod.tools.PalladiumAxe;
+import tbu.blockmod.tools.PalladiumHoe;
+import tbu.blockmod.tools.PalladiumPickaxe;
+import tbu.blockmod.tools.PalladiumToolMaterial;
+
+import javax.tools.Tool;
 
 public class ModItems{
 
@@ -37,6 +43,13 @@ public class ModItems{
     public static final Item RAW_HORSEMEAT = new Item(new Item.Settings().group(Blockmod.BM_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(1.8f).build()));
     public static final Item COOKED_HORSEMEAT = new Item(new Item.Settings().group(Blockmod.BM_GROUP).food(new FoodComponent.Builder().hunger(8).saturationModifier(20.8f).build()));
 
+    // Palladium Tools
+    public static final ToolItem PALLADIUM_SHOVEL = new ShovelItem(PalladiumToolMaterial.INSTANCE, 3F, -2F, new Item.Settings().group(Blockmod.BM_GROUP));
+    public static final ToolItem PALLADIUM_SWORD = new SwordItem(PalladiumToolMaterial.INSTANCE, 5, -1F, new Item.Settings().group(Blockmod.BM_GROUP));
+    public static final ToolItem PALLADIUM_PICKAXE = new PalladiumPickaxe(PalladiumToolMaterial.INSTANCE, 7, -1.8F, new Item.Settings().group(Blockmod.BM_GROUP));
+    public static final ToolItem PALLADIUM_HOE = new PalladiumHoe(PalladiumToolMaterial.INSTANCE, 5, -2F, new Item.Settings().group(Blockmod.BM_GROUP));
+    public static final ToolItem PALLADIUM_AXE = new PalladiumAxe(PalladiumToolMaterial.INSTANCE, 14, -1.5F, new Item.Settings().group(Blockmod.BM_GROUP));
+
 
     // Spawn Eier
     public static final Item ALEX_ENTITY_SPAWN_EGG = new SpawnEggItem(EntityRegister.ALEX, 12895428, 11382189, new Item.Settings().group(Blockmod.BM_GROUP));
@@ -57,6 +70,11 @@ public class ModItems{
         Registry.register(Registry.ITEM, new Identifier("blockmod", "palladium_chestplate"), PALLADIUM_CHESTPLATE);
         Registry.register(Registry.ITEM, new Identifier("blockmod", "palladium_leggings"), PALLADIUM_LEGGINGS);
         Registry.register(Registry.ITEM, new Identifier("blockmod", "palladium_boots"), PALLADIUM_BOOTS);
+        Registry.register(Registry.ITEM, new Identifier("blockmod", "palladium_shovel"), PALLADIUM_SHOVEL);
+        Registry.register(Registry.ITEM, new Identifier("blockmod", "palladium_sword"), PALLADIUM_SWORD);
+        Registry.register(Registry.ITEM, new Identifier("blockmod", "palladium_pickaxe"), PALLADIUM_PICKAXE);
+        Registry.register(Registry.ITEM, new Identifier("blockmod", "palladium_hoe"), PALLADIUM_HOE);
+        Registry.register(Registry.ITEM, new Identifier("blockmod", "palladium_axe"), PALLADIUM_AXE);
 
 
 
