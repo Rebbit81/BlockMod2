@@ -2,16 +2,17 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "rolls": 1,
+      "rolls": 3,
+      "bonus_rolls": 2,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "blockmod:palladium_dust"
-        }
-      ],
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
+          "name": "blockmod:palladium_dust",
+          "conditions": [
+            {
+              "condition": "minecraft:survives_explosion"
+            }
+          ]
         }
       ]
     }
