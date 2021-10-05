@@ -1,5 +1,6 @@
 package tbu.blockmod.items;
 
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
@@ -12,6 +13,7 @@ import tbu.blockmod.tools.PalladiumAxe;
 import tbu.blockmod.tools.PalladiumHoe;
 import tbu.blockmod.tools.PalladiumPickaxe;
 import tbu.blockmod.tools.PalladiumToolMaterial;
+import tbu.blockmod.wands.PalladiumWand;
 
 import javax.tools.Tool;
 
@@ -29,6 +31,7 @@ public class ModItems{
     public static final Item PALLADIUM_INGOT = new Item((new Item.Settings().group(Blockmod.BM_GROUP).rarity(Rarity.EPIC)).recipeRemainder(PALLADIUM_DUST));
     public static final Item PALLADIUM_NUGGET = new Item(new Item.Settings().group(Blockmod.BM_GROUP).rarity(Rarity.EPIC));
     public static final Item PALLADIUM_DUST_BOWL = new Item(new Item.Settings().group(Blockmod.BM_GROUP).rarity(Rarity.EPIC).recipeRemainder(NETHERITE_BOWL).maxCount(1));
+    public static final PalladiumWand PALLADIUM_WAND = new PalladiumWand(new FabricItemSettings().group(ItemGroup.MISC).maxCount(1).rarity(Rarity.EPIC));
 
     // Palladium Armor
     public static final ArmorMaterial PALLADIUM_ARMOR_MATERIAL = new PalladiumAmorMaterial();
@@ -44,11 +47,11 @@ public class ModItems{
     public static final Item COOKED_HORSEMEAT = new Item(new Item.Settings().group(Blockmod.BM_GROUP).food(new FoodComponent.Builder().hunger(8).saturationModifier(20.8f).build()));
 
     // Palladium Tools
-    public static final ToolItem PALLADIUM_SHOVEL = new ShovelItem(PalladiumToolMaterial.INSTANCE, 3F, -2F, new Item.Settings().group(Blockmod.BM_GROUP));
-    public static final ToolItem PALLADIUM_SWORD = new SwordItem(PalladiumToolMaterial.INSTANCE, 5, -1F, new Item.Settings().group(Blockmod.BM_GROUP));
-    public static final ToolItem PALLADIUM_PICKAXE = new PalladiumPickaxe(PalladiumToolMaterial.INSTANCE, 7, -1.8F, new Item.Settings().group(Blockmod.BM_GROUP));
-    public static final ToolItem PALLADIUM_HOE = new PalladiumHoe(PalladiumToolMaterial.INSTANCE, 5, -2F, new Item.Settings().group(Blockmod.BM_GROUP));
-    public static final ToolItem PALLADIUM_AXE = new PalladiumAxe(PalladiumToolMaterial.INSTANCE, 7, -1.6F, new Item.Settings().group(Blockmod.BM_GROUP));
+    public static final ToolItem PALLADIUM_SHOVEL = new ShovelItem(PalladiumToolMaterial.INSTANCE, 3F, -2F, new Item.Settings().group(Blockmod.BM_GROUP).rarity(Rarity.EPIC));
+    public static final ToolItem PALLADIUM_SWORD = new SwordItem(PalladiumToolMaterial.INSTANCE, 5, -1F, new Item.Settings().group(Blockmod.BM_GROUP).rarity(Rarity.EPIC));
+    public static final ToolItem PALLADIUM_PICKAXE = new PalladiumPickaxe(PalladiumToolMaterial.INSTANCE, 7, -1.8F, new Item.Settings().group(Blockmod.BM_GROUP).rarity(Rarity.EPIC));
+    public static final ToolItem PALLADIUM_HOE = new PalladiumHoe(PalladiumToolMaterial.INSTANCE, 5, -2F, new Item.Settings().group(Blockmod.BM_GROUP).rarity(Rarity.EPIC));
+    public static final ToolItem PALLADIUM_AXE = new PalladiumAxe(PalladiumToolMaterial.INSTANCE, 7, -1.6F, new Item.Settings().group(Blockmod.BM_GROUP).rarity(Rarity.EPIC));
 
 
     // Spawn Eier
@@ -75,6 +78,8 @@ public class ModItems{
         Registry.register(Registry.ITEM, new Identifier("blockmod", "palladium_pickaxe"), PALLADIUM_PICKAXE);
         Registry.register(Registry.ITEM, new Identifier("blockmod", "palladium_hoe"), PALLADIUM_HOE);
         Registry.register(Registry.ITEM, new Identifier("blockmod", "palladium_axe"), PALLADIUM_AXE);
+        Registry.register(Registry.ITEM, new Identifier("blockmod", "palladium_wand"), PALLADIUM_WAND);
+
 
 
 
