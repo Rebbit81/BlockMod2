@@ -4,7 +4,6 @@
   "package": "tbu.blockmod.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
-    "ModelLoadMixin"
   ],
   "client": [
   ],
