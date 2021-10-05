@@ -8,6 +8,7 @@ import net.minecraft.util.registry.Registry;
 import tbu.blockmod.Blockmod;
 import tbu.blockmod.armor.PalladiumAmorMaterial;
 import tbu.blockmod.entities.EntityRegister;
+import tbu.blockmod.tools.PalladiumAxe;
 import tbu.blockmod.tools.PalladiumHoe;
 import tbu.blockmod.tools.PalladiumPickaxe;
 import tbu.blockmod.tools.PalladiumToolMaterial;
@@ -47,6 +48,7 @@ public class ModItems{
     public static final ToolItem PALLADIUM_SWORD = new SwordItem(PalladiumToolMaterial.INSTANCE, 5, -1F, new Item.Settings().group(Blockmod.BM_GROUP));
     public static final ToolItem PALLADIUM_PICKAXE = new PalladiumPickaxe(PalladiumToolMaterial.INSTANCE, 7, -1.8F, new Item.Settings().group(Blockmod.BM_GROUP));
     public static final ToolItem PALLADIUM_HOE = new PalladiumHoe(PalladiumToolMaterial.INSTANCE, 5, -2F, new Item.Settings().group(Blockmod.BM_GROUP));
+    public static final ToolItem PALLADIUM_AXE = new PalladiumAxe(PalladiumToolMaterial.INSTANCE, 7, -1.6F, new Item.Settings().group(Blockmod.BM_GROUP));
 
 
     // Spawn Eier
@@ -72,6 +74,7 @@ public class ModItems{
         Registry.register(Registry.ITEM, new Identifier("blockmod", "palladium_sword"), PALLADIUM_SWORD);
         Registry.register(Registry.ITEM, new Identifier("blockmod", "palladium_pickaxe"), PALLADIUM_PICKAXE);
         Registry.register(Registry.ITEM, new Identifier("blockmod", "palladium_hoe"), PALLADIUM_HOE);
+        Registry.register(Registry.ITEM, new Identifier("blockmod", "palladium_axe"), PALLADIUM_AXE);
 
 
 
