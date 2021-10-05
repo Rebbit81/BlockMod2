@@ -12,6 +12,50 @@ import tbu.blockmod.worldgen.PalladiumEndOreGen;
 
 public class Blockmod implements ModInitializer {
 
+
+    public static String createItemModelJson(String id, String type) {
+        if ("generated".equals(type) || "handheld".equals(type)) {
+            //The two types of items. "handheld" is used mostly for tools and the like, while "generated" is used for everything else.
+            return "{\n" +
+                    "  \"parent\": \"item/" + type + "\",\n" +
+                    "  \"textures\": {\n" +
+                    "    \"layer0\": \"blockmod:item/" + id + "\"\n" +
+                    "  }\n" +
+                    "}";
+        } else if ("block".equals(type)) {
+            //However, if the item is a block-item, it will have a different model json than the previous two.
+            return "{\n" +
+                    "  \"parent\": \"blockmod:block/" + id + "\"\n" +
+                    "}";
+        }
+        else {
+            //If the type is invalid, return an empty json string.
+            return "";
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public static final ItemGroup BM_GROUP = FabricItemGroupBuilder.create(
                     new Identifier("blockmod", "bm_group")).icon(()
                     -> new ItemStack(ModBlocks.PALLADIUM_ORE_BLOCK)).build();
