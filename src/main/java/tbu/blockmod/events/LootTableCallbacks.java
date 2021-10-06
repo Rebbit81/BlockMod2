@@ -19,7 +19,7 @@ public class LootTableCallbacks {
 
         // Rohes Pferdefleich Drop
         net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback.EVENT.register((resourceManager, lootManager, id, table, setter) -> {
-            if (ALEX_LOOT_TABLE_ID.equals(id)) {
+            if (HORSE_LOOT_TABLE_ID.equals(id)) {
                 FabricLootPoolBuilder poolBuilder = FabricLootPoolBuilder.builder()
                         .rolls(ConstantLootNumberProvider.create(4))
                         .with(ItemEntry.builder(ModItems.RAW_HORSEMEAT));
