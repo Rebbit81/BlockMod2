@@ -6,7 +6,6 @@ import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import tbu.blockmod.Blockmod;
@@ -24,9 +23,9 @@ public class ModBlocks {
 
         Registry.register(Registry.BLOCK, new Identifier("blockmod", "palladium_block"), PALLADIUM_BLOCK);
         Registry.register(Registry.ITEM, new Identifier("blockmod", "palladium_block"),
-                new BlockItem(PALLADIUM_BLOCK, new FabricItemSettings().group(Blockmod.BM_GROUP.MISC)));
+                new BlockItem(PALLADIUM_BLOCK, new FabricItemSettings().group(Blockmod.BM_GROUP)));
         Registry.register(Registry.BLOCK, new Identifier("blockmod", "palladium_ore_block"), PALLADIUM_ORE_BLOCK);
         Registry.register(Registry.ITEM, new Identifier("blockmod", "palladium_ore_block"),
-                new BlockItem(PALLADIUM_ORE_BLOCK, new FabricItemSettings().group(Blockmod.BM_GROUP.MISC)));
+                new BlockItem(PALLADIUM_ORE_BLOCK, new FabricItemSettings().group(Blockmod.BM_GROUP)));
     }
 }
