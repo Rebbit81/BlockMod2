@@ -26,7 +26,7 @@ public class AlexEntity extends AnimalEntity {
         }
         //Attributes
         public static DefaultAttributeContainer.Builder createAlexAttributes() {
-            return MobEntity.createMobAttributes().add(EntityAttributes.GENERIC_MAX_HEALTH, 15.0D).add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.3D);
+            return MobEntity.createMobAttributes().add(EntityAttributes.GENERIC_MAX_HEALTH, 15.0D).add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.2D);
     }
 
 
