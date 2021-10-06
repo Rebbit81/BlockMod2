@@ -19,18 +19,10 @@ public class PalladiumWand extends Item {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity playerEntity, Hand hand) {
 
 
-             Vec3d vec3d = playerEntity.getEyePos();
-             double d = playerEntity.getEyePos().length();
-             vec3d = playerEntity.getEyePos().normalize();
-
-            double e = 4.0D;
-            Vec3d vec3dd = playerEntity.getRotationVec(1.0F);
-            double f = playerEntity.getX() - (playerEntity.getX() + vec3dd.x * 4.0D);
-            double g = playerEntity.getBodyY(0.5D) - (0.5D + playerEntity.getBodyY(0.5D));
-            double h = playerEntity.getZ() - (playerEntity.getZ() + vec3dd.z * 4.0D);
-
-            FireballEntity fireballEntity = new FireballEntity(playerEntity.world, playerEntity, d, e, f, 5);
+            FireballEntity fireballEntity = new FireballEntity(playerEntity.world, playerEntity, 5, 5, 5, 5);
             fireballEntity.setPosition(playerEntity.getX(), playerEntity.getBodyY(0.5D) + 0.5D, fireballEntity.getZ());
+            fireballEntity.setPitch(playerEntity.getPitch());
+            fireballEntity.setYaw(playerEntity.getYaw());
             world.spawnEntity(fireballEntity);
 
 
