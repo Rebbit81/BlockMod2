@@ -15,10 +15,7 @@ import tbu.blockmod.tools.PalladiumPickaxe;
 import tbu.blockmod.tools.PalladiumToolMaterial;
 import tbu.blockmod.wands.PalladiumWand;
 
-import javax.tools.Tool;
-
 public class ModItems{
-
     public static String MOD_ID = "blockmod";
 
 
@@ -41,8 +38,6 @@ public class ModItems{
     public static final Item PALLADIUM_BOOTS = new ArmorItem(PALLADIUM_ARMOR_MATERIAL, EquipmentSlot.FEET, new Item.Settings().group(Blockmod.BM_GROUP));
 
     // Fleisch
-    public static final Item RAW_CATMEAT = new Item(new Item.Settings().group(Blockmod.BM_GROUP).food(new FoodComponent.Builder().hunger(1).saturationModifier(1.8f).build()));
-    public static final Item COOKED_CATMEAT = new Item(new Item.Settings().group(Blockmod.BM_GROUP).food(new FoodComponent.Builder().hunger(5).saturationModifier(20.8f).build()));
     public static final Item RAW_HORSEMEAT = new Item(new Item.Settings().group(Blockmod.BM_GROUP).food(new FoodComponent.Builder().hunger(3).saturationModifier(1.8f).build()));
     public static final Item COOKED_HORSEMEAT = new Item(new Item.Settings().group(Blockmod.BM_GROUP).food(new FoodComponent.Builder().hunger(8).saturationModifier(20.8f).build()));
 
@@ -64,8 +59,6 @@ public class ModItems{
         Registry.register(Registry.ITEM, new Identifier("blockmod", "palladium_ingot"), PALLADIUM_INGOT);
         Registry.register(Registry.ITEM, new Identifier("blockmod", "raw_horsemeat"), RAW_HORSEMEAT);
         Registry.register(Registry.ITEM, new Identifier("blockmod", "cooked_horsemeat"), COOKED_HORSEMEAT);
-        Registry.register(Registry.ITEM, new Identifier("blockmod", "raw_catmeat"), RAW_CATMEAT);
-        Registry.register(Registry.ITEM, new Identifier("blockmod", "cooked_catmeat"), COOKED_CATMEAT);
         Registry.register(Registry.ITEM, new Identifier("blockmod", "alex_entity_spawn_egg"), ALEX_ENTITY_SPAWN_EGG);
         Registry.register(Registry.ITEM, new Identifier("blockmod", "netherite_bowl"), NETHERITE_BOWL);
         Registry.register(Registry.ITEM, new Identifier("blockmod", "palladium_dust_bowl"), PALLADIUM_DUST_BOWL);
