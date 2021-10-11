@@ -20,7 +20,7 @@ public class ModBlocks {
     // wood
 
     public static final Block CHERRY_WOOD = new Block(FabricBlockSettings.of(Material.WOOD).breakByTool(FabricToolTags.AXES).sounds(BlockSoundGroup.WOOD));
-    public static final Block CHERRY_WOOD_LEAVES = new Block(FabricBlockSettings.of(Material.LEAVES).breakByTool(FabricToolTags.SHEARS).sounds(BlockSoundGroup.AZALEA_LEAVES));
+    public static final Block CHERRY_WOOD_LEAVES = new Block(FabricBlockSettings.of(Material.LEAVES).breakByTool(FabricToolTags.SHEARS).sounds(BlockSoundGroup.AZALEA_LEAVES).nonOpaque());
 
 
     public static final Block PALLADIUM_BLOCK = new Block(FabricBlockSettings.of(Material.METAL).strength(5.0f).breakByHand(false));

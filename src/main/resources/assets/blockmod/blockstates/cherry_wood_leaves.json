@@ -1,6 +1,7 @@
 {
   "variants": {
-    "": { "model": "blockmod:block/cherry_wood_leaves" }
+    "": {
+      "model": "blockmod:block/cherry_wood_leaves"
+    }
   }
 }
-

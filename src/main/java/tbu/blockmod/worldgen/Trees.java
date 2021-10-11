@@ -17,7 +17,9 @@ import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.TreeFeatureConfig;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
+import net.minecraft.world.gen.foliage.RandomSpreadFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.SimpleBlockStateProvider;
+import net.minecraft.world.gen.trunk.ForkingTrunkPlacer;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 import tbu.blockmod.blocks.ModBlocks;
 
@@ -28,11 +30,11 @@ public class Trees {
     public static final ConfiguredFeature<?, ?> TREE_CHERRY = Feature.TREE
             // Configure the feature using the builder
             .configure(new TreeFeatureConfig.Builder(
-                    new SimpleBlockStateProvider(Blocks.NETHERITE_BLOCK.getDefaultState()), // Trunk block provider
-                    new StraightTrunkPlacer(8, 3, 0), // places a straight trunk
+                    new SimpleBlockStateProvider(ModBlocks.CHERRY_WOOD.getDefaultState()), // Trunk block provider
+                    new ForkingTrunkPlacer(6,3,0), // places a straight trunk
                     new SimpleBlockStateProvider(ModBlocks.CHERRY_WOOD_LEAVES.getDefaultState()), // Foliage block provider
                     new SimpleBlockStateProvider(Blocks.OAK_SAPLING.getDefaultState()), // Sapling provider; used to determine what blocks the tree can generate on
-                    new BlobFoliagePlacer(ConstantIntProvider.create(5), ConstantIntProvider.create(0), 3), // places leaves as a blob (radius, offset from trunk, height)
+                    new RandomSpreadFoliagePlacer(ConstantIntProvider.create(5), ConstantIntProvider.create(2), ConstantIntProvider.create(1), 3), // places leaves as a blob (radius, offset from trunk, height)
                     new TwoLayersFeatureSize(1, 0, 1) // The width of the tree at different layers; used to see how tall the tree can be without clipping into blocks
             ).build())
             .decorate(Decorator.HEIGHTMAP.configure(new HeightmapDecoratorConfig(Heightmap.Type.MOTION_BLOCKING)))
