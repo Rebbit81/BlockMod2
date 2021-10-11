@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
+import net.minecraft.block.PillarBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
@@ -19,7 +20,8 @@ public class ModBlocks {
 
     // wood
 
-    public static final Block CHERRY_WOOD = new Block(FabricBlockSettings.of(Material.WOOD).breakByTool(FabricToolTags.AXES).sounds(BlockSoundGroup.WOOD));
+    public static final Block CHERRY_WOOD = new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG));
+    public static final Block CHERRY_WOOD_PLANKS = new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS));
     public static final Block CHERRY_WOOD_LEAVES = new Block(FabricBlockSettings.of(Material.LEAVES).breakByTool(FabricToolTags.SHEARS).sounds(BlockSoundGroup.AZALEA_LEAVES).nonOpaque());
 
 
@@ -29,21 +31,17 @@ public class ModBlocks {
 
     public static void init() {
 
-
         Registry.register(Registry.BLOCK, new Identifier("blockmod", "palladium_block"), PALLADIUM_BLOCK);
-        Registry.register(Registry.ITEM, new Identifier("blockmod", "palladium_block"),
-                new BlockItem(PALLADIUM_BLOCK, new FabricItemSettings().group(Blockmod.BM_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier("blockmod", "palladium_block"), new BlockItem(PALLADIUM_BLOCK, new FabricItemSettings().group(Blockmod.BM_GROUP)));
         Registry.register(Registry.BLOCK, new Identifier("blockmod", "palladium_ore_block"), PALLADIUM_ORE_BLOCK);
-        Registry.register(Registry.ITEM, new Identifier("blockmod", "palladium_ore_block"),
-                new BlockItem(PALLADIUM_ORE_BLOCK, new FabricItemSettings().group(Blockmod.BM_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier("blockmod", "rich_sapling"), CHERRY_SAPLING_BLOCK);
-        Registry.register(Registry.ITEM, new Identifier("blockmod", "rich_sapling"),
-                new BlockItem(CHERRY_SAPLING_BLOCK, new FabricItemSettings().group(Blockmod.BM_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier("blockmod", "palladium_ore_block"), new BlockItem(PALLADIUM_ORE_BLOCK, new FabricItemSettings().group(Blockmod.BM_GROUP)));
+        Registry.register(Registry.BLOCK, new Identifier("blockmod", "cherry_tree_sapling"), CHERRY_SAPLING_BLOCK);
+        Registry.register(Registry.ITEM, new Identifier("blockmod", "cherry_tree_sapling"), new BlockItem(CHERRY_SAPLING_BLOCK, new FabricItemSettings().group(Blockmod.BM_GROUP)));
         Registry.register(Registry.BLOCK, new Identifier("blockmod", "cherry_wood"), CHERRY_WOOD);
-        Registry.register(Registry.ITEM, new Identifier("blockmod", "cherry_wood"),
-                new BlockItem(CHERRY_WOOD, new FabricItemSettings().group(Blockmod.BM_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier("blockmod", "cherry_wood"), new BlockItem(CHERRY_WOOD, new FabricItemSettings().group(Blockmod.BM_GROUP)));
         Registry.register(Registry.BLOCK, new Identifier("blockmod", "cherry_wood_leaves"), CHERRY_WOOD_LEAVES);
-        Registry.register(Registry.ITEM, new Identifier("blockmod", "cherry_wood_leaves"),
-                new BlockItem(CHERRY_WOOD_LEAVES, new FabricItemSettings().group(Blockmod.BM_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier("blockmod", "cherry_wood_leaves"), new BlockItem(CHERRY_WOOD_LEAVES, new FabricItemSettings().group(Blockmod.BM_GROUP)));
+        Registry.register(Registry.BLOCK, new Identifier("blockmod", "cherry_wood_planks"), CHERRY_WOOD_PLANKS);
+        Registry.register(Registry.ITEM, new Identifier("blockmod", "cherry_wood_planks"), new BlockItem(CHERRY_WOOD_PLANKS, new FabricItemSettings().group(Blockmod.BM_GROUP)));
     }
 }

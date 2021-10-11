@@ -6,11 +6,11 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:netherite_ingot"
+      "item": "minecraft:netherit_ingot"
     }
   },
   "result": {
-    "item": "blockmod:netherite_bowl",
+    "item": "minecraft:granite",
     "count": 1
   }
 }

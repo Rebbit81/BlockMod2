@@ -16,9 +16,6 @@ import tbu.blockmod.tools.PalladiumToolMaterial;
 import tbu.blockmod.wands.PalladiumWand;
 
 public class ModItems{
-    public static String MOD_ID = "blockmod";
-
-
 
     // Netherite Bowl
     public static final Item NETHERITE_BOWL = new Item(new Item.Settings().group(Blockmod.BM_GROUP));

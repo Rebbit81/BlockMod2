@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "blockmod:block/cherry_wood_planks"
+  }
+}
+
