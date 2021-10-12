@@ -30,6 +30,5 @@ public class Blockmod implements ModInitializer {
         portals.init();
         BiomeInit.init();
         Trees.init();
-
     }
 }

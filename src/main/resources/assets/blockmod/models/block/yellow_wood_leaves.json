@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "blockmod:block/yellow_wood_leaves"
+  }
+}

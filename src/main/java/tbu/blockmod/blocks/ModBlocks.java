@@ -23,6 +23,9 @@ public class ModBlocks {
     public static final Block CHERRY_WOOD = new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG));
     public static final Block CHERRY_WOOD_PLANKS = new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS));
     public static final Block CHERRY_WOOD_LEAVES = new Block(FabricBlockSettings.of(Material.LEAVES).breakByTool(FabricToolTags.SHEARS).sounds(BlockSoundGroup.AZALEA_LEAVES).nonOpaque());
+    public static final Block YELLOW_WOOD_LEAVES = new Block(FabricBlockSettings.of(Material.LEAVES).breakByTool(FabricToolTags.SHEARS).sounds(BlockSoundGroup.AZALEA_LEAVES).nonOpaque());
+    public static final Block ORANGE_WOOD_LEAVES = new Block(FabricBlockSettings.of(Material.LEAVES).breakByTool(FabricToolTags.SHEARS).sounds(BlockSoundGroup.AZALEA_LEAVES).nonOpaque());
+
 
 
     public static final Block PALLADIUM_BLOCK = new Block(FabricBlockSettings.of(Material.METAL).strength(5.0f).breakByHand(false));
@@ -43,5 +46,9 @@ public class ModBlocks {
         Registry.register(Registry.ITEM, new Identifier("blockmod", "cherry_wood_leaves"), new BlockItem(CHERRY_WOOD_LEAVES, new FabricItemSettings().group(Blockmod.BM_GROUP)));
         Registry.register(Registry.BLOCK, new Identifier("blockmod", "cherry_wood_planks"), CHERRY_WOOD_PLANKS);
         Registry.register(Registry.ITEM, new Identifier("blockmod", "cherry_wood_planks"), new BlockItem(CHERRY_WOOD_PLANKS, new FabricItemSettings().group(Blockmod.BM_GROUP)));
+        Registry.register(Registry.BLOCK, new Identifier("blockmod", "orange_wood_leaves"), ORANGE_WOOD_LEAVES);
+        Registry.register(Registry.ITEM, new Identifier("blockmod", "orange_wood_leaves"), new BlockItem(ORANGE_WOOD_LEAVES, new FabricItemSettings().group(Blockmod.BM_GROUP)));
+        Registry.register(Registry.BLOCK, new Identifier("blockmod", "yellow_wood_leaves"), YELLOW_WOOD_LEAVES);
+        Registry.register(Registry.ITEM, new Identifier("blockmod", "yellow_wood_leaves"), new BlockItem(YELLOW_WOOD_LEAVES, new FabricItemSettings().group(Blockmod.BM_GROUP)));
     }
 }

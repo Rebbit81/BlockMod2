@@ -42,13 +42,53 @@ public class Trees {
             .decorate(Decorator.HEIGHTMAP.configure(new HeightmapDecoratorConfig(Heightmap.Type.MOTION_BLOCKING)))
             .applyChance(2); // About a 50% chance to generate per chunk (1/x)
 
+    public static final ConfiguredFeature<?, ?> TREE_ORANGE = Feature.TREE
+            // Configure the feature using the builder
+            .configure(new TreeFeatureConfig.Builder(
+                    new SimpleBlockStateProvider(Blocks.DARK_OAK_LOG.getDefaultState()), // Trunk block provider
+                    new StraightTrunkPlacer(6, 2, 0), // places a straight trunk
+                    new SimpleBlockStateProvider(ModBlocks.ORANGE_WOOD_LEAVES.getDefaultState()), // Foliage block provider
+                    new SimpleBlockStateProvider(Blocks.OAK_SAPLING.getDefaultState()), // Sapling provider; used to determine what blocks the tree can generate on
+                    new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
+                    new TwoLayersFeatureSize(1, 0, 1) // The width of the tree at different layers; used to see how tall the tree can be without clipping into blocks
+            ).ignoreVines().build())
+            .decorate(Decorator.HEIGHTMAP.configure(new HeightmapDecoratorConfig(Heightmap.Type.MOTION_BLOCKING)))
+            .applyChance(2); // About a 50% chance to generate per chunk (1/x)
+
+    public static final ConfiguredFeature<?, ?> TREE_YELLOW = Feature.TREE
+            // Configure the feature using the builder
+            .configure(new TreeFeatureConfig.Builder(
+                    new SimpleBlockStateProvider(Blocks.BIRCH_LOG.getDefaultState()), // Trunk block provider
+                    new StraightTrunkPlacer(6, 2, 0), // places a straight trunk
+                    new SimpleBlockStateProvider(ModBlocks.YELLOW_WOOD_LEAVES.getDefaultState()), // Foliage block provider
+                    new SimpleBlockStateProvider(Blocks.OAK_SAPLING.getDefaultState()), // Sapling provider; used to determine what blocks the tree can generate on
+                    new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
+                    new TwoLayersFeatureSize(1, 0, 1) // The width of the tree at different layers; used to see how tall the tree can be without clipping into blocks
+            ).ignoreVines().build())
+            .decorate(Decorator.HEIGHTMAP.configure(new HeightmapDecoratorConfig(Heightmap.Type.MOTION_BLOCKING)))
+            .applyChance(2); // About a 50% chance to generate per chunk (1/x)
+
     public static void init(){
 
-        RegistryKey<ConfiguredFeature<?, ?>> treeRich = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, new Identifier("blockmod", "tree_rich"));
+        RegistryKey<ConfiguredFeature<?, ?>> treeCherry = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, new Identifier("blockmod", "tree_cherry"));
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, treeCherry.getValue(), TREE_CHERRY);
+        RegistryKey<ConfiguredFeature<?, ?>> treeOrange = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, new Identifier("blockmod", "tree_orange"));
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, treeOrange.getValue(), TREE_ORANGE);
+        RegistryKey<ConfiguredFeature<?, ?>> treeYellow = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, new Identifier("blockmod", "tree_yellow"));
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, treeYellow.getValue(), TREE_YELLOW);
 
-        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, treeRich.getValue(), TREE_CHERRY);
 
-        // You should use the VEGETAL_DECORATION generation step for trees
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeInit.ARES_PLAINS_KEY), GenerationStep.Feature.VEGETAL_DECORATION, treeRich);
+
+
+
+
+
+
+        // Spawn
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeInit.ARES_PLAINS_KEY), GenerationStep.Feature.VEGETAL_DECORATION, treeCherry);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeInit.ARES_PLAINS_KEY), GenerationStep.Feature.VEGETAL_DECORATION, treeYellow);
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeInit.ARES_PLAINS_KEY), GenerationStep.Feature.VEGETAL_DECORATION, treeOrange);
+
+
     }
 }

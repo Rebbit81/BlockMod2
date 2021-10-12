@@ -38,7 +38,6 @@ public class PalladiumAmorMaterial implements ArmorMaterial {
 
     @Override
     public String getName() {
-        // Must be all lowercase
         return "palladium";
     }
 

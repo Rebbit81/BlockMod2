@@ -25,7 +25,7 @@ public class ModItems{
     public static final Item PALLADIUM_INGOT = new Item((new Item.Settings().group(Blockmod.BM_GROUP).rarity(Rarity.EPIC)).recipeRemainder(PALLADIUM_DUST));
     public static final Item PALLADIUM_NUGGET = new Item(new Item.Settings().group(Blockmod.BM_GROUP).rarity(Rarity.EPIC));
     public static final Item PALLADIUM_DUST_BOWL = new Item(new Item.Settings().group(Blockmod.BM_GROUP).rarity(Rarity.EPIC).recipeRemainder(NETHERITE_BOWL).maxCount(1));
-    public static final PalladiumWand PALLADIUM_WAND = new PalladiumWand(new FabricItemSettings().group(ItemGroup.MISC).maxCount(1).rarity(Rarity.EPIC));
+    public static final PalladiumWand PALLADIUM_WAND = new PalladiumWand(new FabricItemSettings().group(ItemGroup.MISC).maxCount(1).rarity(Rarity.EPIC).maxDamage(5));
 
     // Palladium Armor
     public static final ArmorMaterial PALLADIUM_ARMOR_MATERIAL = new PalladiumAmorMaterial();

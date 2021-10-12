@@ -1,13 +1,14 @@
 package tbu.blockmod.wands;
 
-import net.minecraft.entity.LivingEntity;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.DragonFireballEntity;
-import net.minecraft.entity.projectile.FireballEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.state.StateManager;
+import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.Vec3d;
@@ -15,10 +16,12 @@ import net.minecraft.world.World;
 
 public class PalladiumWand extends Item {
 
+    public static final BooleanProperty CHARGED = BooleanProperty.of("charged");
+
+
     public PalladiumWand(Settings settings) {
         super(settings);
-
-        }
+    }
 
 
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
@@ -35,7 +38,6 @@ public class PalladiumWand extends Item {
 
         return TypedActionResult.success(user.getStackInHand(hand));
 
-        }
-
+    }
 
 }

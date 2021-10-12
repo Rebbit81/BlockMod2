@@ -23,12 +23,7 @@
   "block.blockmod.cherry_wood": "Cherry Wood",
   "block.blockmod.cherry_wood_planks": "Cherry Wood Planks",
   "block.blockmod.cherry_wood_leaves": "Cherry Wood Leaves",
-  "block.blockmod.cherry_sapling_block": "Cherry Tree Sapling"
-
-
-
-
-
-
-
+  "block.blockmod.cherry_sapling_block": "Cherry Tree Sapling",
+  "block.blockmod.orange_wood_leaves": "Orange Leaves",
+  "block.blockmod.yellow_wood_leaves": "Yellow Leaves"
 }
