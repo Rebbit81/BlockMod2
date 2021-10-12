@@ -40,7 +40,6 @@ public class Trees {
                     new TwoLayersFeatureSize(1, 0, 1) // The width of the tree at different layers; used to see how tall the tree can be without clipping into blocks
             ).ignoreVines().build())
             .decorate(Decorator.HEIGHTMAP.configure(new HeightmapDecoratorConfig(Heightmap.Type.MOTION_BLOCKING)))
-            .spreadHorizontally()
             .applyChance(2); // About a 50% chance to generate per chunk (1/x)
 
     public static void init(){
