@@ -1,4 +1,4 @@
-package tbu.blockmod.worldgen;
+package tbu.blockmod.worldgen.trees;
 
 import net.minecraft.block.sapling.SaplingGenerator;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
@@ -7,10 +7,10 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Random;
 
-public class CherrySaplingGenerator extends SaplingGenerator {
+public class BlockmodSaplingGenerator extends SaplingGenerator {
     private final ConfiguredFeature<TreeFeatureConfig, ?> feature;
 
-    public CherrySaplingGenerator(ConfiguredFeature<?, ?> feature) {
+    public BlockmodSaplingGenerator(ConfiguredFeature<?, ?> feature) {
         this.feature = (ConfiguredFeature<TreeFeatureConfig, ?>) feature;
     }
 
