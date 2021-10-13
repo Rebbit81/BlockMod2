@@ -18,11 +18,9 @@ import net.minecraft.world.BlockView;
 import tbu.blockmod.Blockmod;
 import tbu.blockmod.worldgen.trees.BlockmodSaplingBlock;
 import tbu.blockmod.worldgen.trees.BlockmodSaplingGenerator;
-
 import java.util.HashMap;
 import java.util.Map;
-
-import static tbu.blockmod.worldgen.Trees.*;
+import static tbu.blockmod.worldgen.trees.Trees.*;
 
 public class ModBlocks {
 
@@ -31,7 +29,7 @@ public class ModBlocks {
 
 
     // Cherry Wood
-    public static final Block CHERRY_WOOD = new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG));
+    public static final Block CHERRY_WOOD = add("cherry_wood", new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)), Blockmod.BM_GROUP);
     public static final Block CHERRY_WOOD_PLANKS = add("cherry_wood_planks", new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)), Blockmod.BM_GROUP);
     public static final Block CHERRY_WOOD_LEAVES = add("cherry_wood_leaves", new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)), Blockmod.BM_GROUP);
 
@@ -56,21 +54,12 @@ public class ModBlocks {
 
 
 
-
-
-
-
-
-
-
-
-
     private static PillarBlock createLogBlock() {
         return new PillarBlock(AbstractBlock.Settings.of(Material.WOOD).strength(2.0F).sounds(BlockSoundGroup.WOOD));
     }
 
     private static LeavesBlock createLeavesBlock(BlockSoundGroup soundGroup) {
-        return new LeavesBlock(AbstractBlock.Settings.of(Material.LEAVES).strength(0.2F).ticksRandomly().sounds(soundGroup).nonOpaque());
+        return new LeavesBlock(AbstractBlock.Settings.of(Material.LEAVES).strength(0.2F).ticksRandomly().sounds(soundGroup).nonOpaque().allowsSpawning(ModBlocks::canSpawnOnLeaves).suffocates(ModBlocks::never).blockVision(ModBlocks::never));
     }
 
     private static <B extends Block> B add(String name, B block, ItemGroup tab) {

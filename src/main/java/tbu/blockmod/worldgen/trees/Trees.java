@@ -1,4 +1,4 @@
-package tbu.blockmod.worldgen;
+package tbu.blockmod.worldgen.trees;
 
 import com.google.common.collect.ImmutableList;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
@@ -47,9 +47,7 @@ public class Trees {
                     new SimpleBlockStateProvider(Blocks.OAK_SAPLING.getDefaultState()), // Sapling provider; used to determine what blocks the tree can generate on
                     new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
                     new TwoLayersFeatureSize(1, 0, 1) // The width of the tree at different layers; used to see how tall the tree can be without clipping into blocks
-            ).ignoreVines().build())
-            .decorate(Decorator.HEIGHTMAP.configure(new HeightmapDecoratorConfig(Heightmap.Type.MOTION_BLOCKING)))
-            .applyChance(2); // About a 50% chance to generate per chunk (1/x)
+            ).ignoreVines().build());
 
     public static final ConfiguredFeature<?, ?> TREE_ORANGE = Feature.TREE
             // Configure the feature using the builder
@@ -60,9 +58,7 @@ public class Trees {
                     new SimpleBlockStateProvider(Blocks.OAK_SAPLING.getDefaultState()), // Sapling provider; used to determine what blocks the tree can generate on
                     new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
                     new TwoLayersFeatureSize(1, 0, 1) // The width of the tree at different layers; used to see how tall the tree can be without clipping into blocks
-            ).ignoreVines().build())
-            .decorate(Decorator.HEIGHTMAP.configure(new HeightmapDecoratorConfig(Heightmap.Type.MOTION_BLOCKING)))
-            .applyChance(2); // About a 50% chance to generate per chunk (1/x)
+            ).ignoreVines().build());
 
     public static final ConfiguredFeature<?, ?> TREE_YELLOW = Feature.TREE
             // Configure the feature using the builder
@@ -73,9 +69,7 @@ public class Trees {
                     new SimpleBlockStateProvider(Blocks.OAK_SAPLING.getDefaultState()), // Sapling provider; used to determine what blocks the tree can generate on
                     new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
                     new TwoLayersFeatureSize(1, 0, 1) // The width of the tree at different layers; used to see how tall the tree can be without clipping into blocks
-            ).ignoreVines().build())
-            .decorate(Decorator.HEIGHTMAP.configure(new HeightmapDecoratorConfig(Heightmap.Type.MOTION_BLOCKING)))
-            .applyChance(2); // About a 50% chance to generate per chunk (1/x)
+            ).ignoreVines().build());
 
     public static final ConfiguredFeature<?, ?> ARES_TREES = Feature.RANDOM_SELECTOR.configure(
                             new RandomFeatureConfig(
@@ -85,9 +79,9 @@ public class Trees {
                                             TREE_CHERRY.withChance(0.33F)
                                     ), ConfiguredFeatures.OAK
                             )
-                    ).decorate(Decorator.HEIGHTMAP.configure(new HeightmapDecoratorConfig(Heightmap.Type.MOTION_BLOCKING)))
-                    .decorate(Decorator.COUNT_EXTRA.configure(
-                            new CountExtraDecoratorConfig(10, 0.1F, 1)));
+                             ).decorate(Decorator.HEIGHTMAP.configure(new HeightmapDecoratorConfig(Heightmap.Type.MOTION_BLOCKING)))
+                            .decorate(Decorator.COUNT_EXTRA.configure(new CountExtraDecoratorConfig(50, 0.1F, 1)))
+                            .spreadHorizontally();
 
 
     public static void init(){

@@ -12,7 +12,7 @@ import tbu.blockmod.init.BiomeInit;
 import tbu.blockmod.init.DimensionInit;
 import tbu.blockmod.items.ModItems;
 import tbu.blockmod.worldgen.PalladiumEndOreGen;
-import tbu.blockmod.worldgen.Trees;
+import tbu.blockmod.worldgen.trees.Trees;
 
 public class Blockmod implements ModInitializer {
     public static String MOD_ID = "blockmod";
