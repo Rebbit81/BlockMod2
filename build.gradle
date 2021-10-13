@@ -13,6 +13,8 @@ repositories {
     // See https://docs.gradle.org/current/userguide/declaring_repositories.html
     // for more information about repositories.
     maven {url = "https://maven.kyrptonaught.dev"}
+    maven {name = 'TerraformersMC'
+           url = 'https://maven.terraformersmc.com/'}
 }
 
 dependencies {
@@ -24,8 +26,13 @@ dependencies {
     // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
+    // Custom Portal API
     modImplementation 'net.kyrptonaught:customportalapi:0.0.1-beta45-1.17'
     include 'net.kyrptonaught:customportalapi:0.0.1-beta45-1.17'
+
+    // Terraform API
+    modImplementation "com.terraformersmc.terraform-api:terraform-tree-api-v1:2.0.0"
+    modImplementation"com.terraformersmc.terraform-api:terraform-wood-api-v1:2.0.2"
 
 }
 

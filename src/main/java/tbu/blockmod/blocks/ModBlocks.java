@@ -1,6 +1,7 @@
 package tbu.blockmod.blocks;
 
 import com.sun.source.util.Trees;
+import com.terraformersmc.terraform.wood.block.StrippableLogBlock;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
@@ -29,7 +30,8 @@ public class ModBlocks {
 
 
     // Cherry Wood
-    public static final Block CHERRY_WOOD = add("cherry_wood", new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG)), Blockmod.BM_GROUP);
+    public static final Block STRIPPED_CHERRY_WOOD = add("stripped_cherry_wood", createLogBlock(MapColor.BROWN, MapColor.OAK_TAN), ItemGroup.BUILDING_BLOCKS);
+    public static final Block CHERRY_WOOD = add("cherry_wood", new StrippableLogBlock(() -> STRIPPED_CHERRY_WOOD, MapColor.BROWN, FabricBlockSettings.copyOf(Blocks.DARK_OAK_LOG)), Blockmod.BM_GROUP);
     public static final Block CHERRY_WOOD_PLANKS = add("cherry_wood_planks", new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)), Blockmod.BM_GROUP);
     public static final Block CHERRY_WOOD_LEAVES = add("cherry_wood_leaves", new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES)), Blockmod.BM_GROUP);
 
@@ -54,13 +56,10 @@ public class ModBlocks {
 
 
 
-    private static PillarBlock createLogBlock() {
-        return new PillarBlock(AbstractBlock.Settings.of(Material.WOOD).strength(2.0F).sounds(BlockSoundGroup.WOOD));
+    private static PillarBlock createLogBlock(MapColor topColor, MapColor sideColor) {
+        return new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).strength(2.0F).sounds(BlockSoundGroup.WOOD));
     }
 
-    private static LeavesBlock createLeavesBlock(BlockSoundGroup soundGroup) {
-        return new LeavesBlock(AbstractBlock.Settings.of(Material.LEAVES).strength(0.2F).ticksRandomly().sounds(soundGroup).nonOpaque().allowsSpawning(ModBlocks::canSpawnOnLeaves).suffocates(ModBlocks::never).blockVision(ModBlocks::never));
-    }
 
     private static <B extends Block> B add(String name, B block, ItemGroup tab) {
         return add(name, block, new BlockItem(block, new Item.Settings().group(tab)));

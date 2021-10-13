@@ -81,7 +81,8 @@ public class Trees {
                             )
                              ).decorate(Decorator.HEIGHTMAP.configure(new HeightmapDecoratorConfig(Heightmap.Type.MOTION_BLOCKING)))
                             .decorate(Decorator.COUNT_EXTRA.configure(new CountExtraDecoratorConfig(50, 0.1F, 1)))
-                            .spreadHorizontally();
+                            .spreadHorizontally()
+                            .repeat(2);
 
 
     public static void init(){
