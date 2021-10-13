@@ -22,7 +22,6 @@ public class BiomeInit {
     public static void init(){
 
         Registry.register(BuiltinRegistries.BIOME, new Identifier("blockmod", "ares_plains"), DefaultBiomeCreator.createTheVoid());
-        OverworldBiomes.addContinentalBiome(ARES_PLAINS_KEY, OverworldClimate.TEMPERATE, 2D);
 
     }
 

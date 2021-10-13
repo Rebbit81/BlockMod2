@@ -74,15 +74,14 @@ public class Trees {
     public static final ConfiguredFeature<?, ?> ARES_TREES = Feature.RANDOM_SELECTOR.configure(
                             new RandomFeatureConfig(
                                     ImmutableList.of(
-                                            TREE_YELLOW.withChance(0.33F),
-                                            TREE_ORANGE.withChance(0.33F),
-                                            TREE_CHERRY.withChance(0.33F)
-                                    ), ConfiguredFeatures.OAK
+                                            TREE_YELLOW.withChance(0.50F),
+                                            TREE_ORANGE.withChance(0.50F)
+                                    ), TREE_CHERRY
                             )
                              ).decorate(Decorator.HEIGHTMAP.configure(new HeightmapDecoratorConfig(Heightmap.Type.MOTION_BLOCKING)))
                             .decorate(Decorator.COUNT_EXTRA.configure(new CountExtraDecoratorConfig(50, 0.1F, 1)))
                             .spreadHorizontally()
-                            .repeat(2);
+                            .repeat(3);
 
 
     public static void init(){

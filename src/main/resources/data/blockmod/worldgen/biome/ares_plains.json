@@ -1,28 +1,20 @@
 {
   "surface_builder": "minecraft:grass",
-  "depth": 0.1,
-  "scale": 0.2,
-  "temperature": 0.6,
-  "downfall": 0.6,
+  "depth": 0.125,
+  "scale": 0.05,
+  "temperature": 0.8,
+  "downfall": 0,
   "precipitation": "none",
-  "category": "forest",
-  "player_spawn_friendly": true,
+  "category": "none",
+  "player_spawn_friendly": false,
   "effects": {
-    "sky_color": 7972607,
+    "sky_color": 15049994,
     "fog_color": 12638463,
-    "water_color": 4159204,
-    "water_fog_color": 329011,
-    "mood_sound": {
-      "sound": "minecraft:ambient.cave",
-      "tick_delay": 6000,
-      "block_search_extent": 8,
-      "offset": 2
-    }
+    "water_color": 10076657,
+    "water_fog_color": 1864152
   },
   "starts": [
-    "minecraft:mineshaft",
-    "minecraft:stronghold",
-    "minecraft:ruined_portal"
+    "minecraft:village_plains"
   ],
   "spawners": {},
   "spawn_costs": {},
@@ -35,53 +27,35 @@
   "features": [
     [],
     [
-      "minecraft:lake_water",
-      "minecraft:lake_lava"
+      "minecraft:lake_water"
     ],
-    [
-      "minecraft:amethyst_geode"
-    ],
-    [
-      "minecraft:monster_room"
-    ],
+    [],
+    [],
     [],
     [],
     [
       "minecraft:ore_dirt",
       "minecraft:ore_gravel",
-      "minecraft:ore_granite",
-      "minecraft:ore_diorite",
-      "minecraft:ore_andesite",
-      "minecraft:ore_tuff",
-      "minecraft:ore_deepslate",
-      "minecraft:ore_coal",
       "minecraft:ore_iron",
       "minecraft:ore_gold",
-      "minecraft:ore_redstone",
       "minecraft:ore_diamond",
       "minecraft:ore_lapis",
       "minecraft:ore_copper",
-      "minecraft:disk_sand",
-      "minecraft:disk_clay",
-      "minecraft:disk_gravel"
+      "minecraft:disk_sand"
     ],
     [
-      "minecraft:rare_dripstone_cluster",
-      "minecraft:rare_small_dripstone"
-    ],
-    [
-      "blockmod:ares_trees",
-      "minecraft:forest_flower_vegetation",
+      "minecraft:patch_tall_grass_2",
+      "minecraft:patch_sunflower",
       "minecraft:glow_lichen",
-      "minecraft:flower_default",
-      "minecraft:patch_grass_forest",
+      "minecraft:plain_vegetation",
+      "minecraft:flower_plain_decorated",
+      "minecraft:patch_grass_plain",
+      "minecraft:patch_sugar_cane",
       "minecraft:brown_mushroom_normal",
       "minecraft:red_mushroom_normal",
-      "minecraft:patch_sugar_cane",
+      "minecraft:patch_pumpkin",
       "minecraft:spring_water",
-      "minecraft:spring_lava"
-
-
+      "blockmod:ares_trees"
     ],
     [
       "minecraft:freeze_top_layer"
