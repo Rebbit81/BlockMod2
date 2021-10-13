@@ -12,7 +12,6 @@ import tbu.blockmod.init.BiomeInit;
 import tbu.blockmod.init.DimensionInit;
 import tbu.blockmod.items.ModItems;
 import tbu.blockmod.worldgen.PalladiumEndOreGen;
-import tbu.blockmod.worldgen.Trees;
 
 public class Blockmod implements ModInitializer {
     public static String MOD_ID = "blockmod";
@@ -29,6 +28,5 @@ public class Blockmod implements ModInitializer {
         DimensionInit.init();
         portals.init();
         BiomeInit.init();
-        Trees.init();
     }
 }

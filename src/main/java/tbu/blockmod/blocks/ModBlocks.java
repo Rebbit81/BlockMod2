@@ -2,6 +2,7 @@ package tbu.blockmod.blocks;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -14,7 +15,7 @@ import net.minecraft.util.registry.Registry;
 import tbu.blockmod.Blockmod;
 import tbu.blockmod.worldgen.CherrySaplingBlock;
 import tbu.blockmod.worldgen.CherrySaplingGenerator;
-import static tbu.blockmod.worldgen.Trees.TREE_CHERRY;
+import tbu.blockmod.worldgen.trees.Trees;
 
 public class ModBlocks {
 
@@ -30,7 +31,11 @@ public class ModBlocks {
 
     public static final Block PALLADIUM_BLOCK = new Block(FabricBlockSettings.of(Material.METAL).strength(5.0f).breakByHand(false));
     public static final Block PALLADIUM_ORE_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0f).breakByHand(false).breakByTool(FabricToolTags.PICKAXES, 4));
-    public static final CherrySaplingBlock CHERRY_SAPLING_BLOCK = new CherrySaplingBlock(new CherrySaplingGenerator(TREE_CHERRY), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING));
+    public static final CherrySaplingBlock CHERRY_SAPLING_BLOCK = new CherrySaplingBlock(new CherrySaplingGenerator(Trees.CHERRY_TREE_CONFIG), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING));
+
+
+
+
 
     public static void init() {
 
