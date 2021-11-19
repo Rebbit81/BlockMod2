@@ -45,7 +45,6 @@ public class ModItems{
     public static final ToolItem PALLADIUM_HOE = new PalladiumHoe(PalladiumToolMaterial.INSTANCE, 5, -2F, new Item.Settings().group(Blockmod.BM_GROUP).rarity(Rarity.EPIC));
     public static final ToolItem PALLADIUM_AXE = new PalladiumAxe(PalladiumToolMaterial.INSTANCE, 7, -1.6F, new Item.Settings().group(Blockmod.BM_GROUP).rarity(Rarity.EPIC));
 
-
     // Spawn Eier
     public static final Item ALEX_ENTITY_SPAWN_EGG = new SpawnEggItem(EntityRegister.ALEX, 12895428, 11382189, new Item.Settings().group(Blockmod.BM_GROUP));
 
